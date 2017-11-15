@@ -54,7 +54,7 @@ class Database {
         }
     }
     
-    public function login($username, $password) {
+    public function login($email, $password) {
         if($this->link) {
             $sql = "SELECT * FROM creds WHERE email='$email' AND password='$password';";
             $res = mysqli_query($this->link, $sql);
@@ -67,7 +67,7 @@ class Database {
                 return true;
             }
             else return "Invalid credentials.";
-        } else return "Couldn't connect to database.";
+        } else return "Couldn't connect to database. Try after sometime.";
     }
 }
 

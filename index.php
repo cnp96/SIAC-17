@@ -4,6 +4,14 @@ Author URL: https://shonak-chinmayapati.c9users.io
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
+<?php
+	error_reporting(0);
+	session_start();
+	if( isset($_SESSION["id"]) && !empty($_SESSION["id"]) )  {
+		header("Location: dashboard.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,6 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- Login Form -->
 			<form>
 				<ul class="right-form">
+					<h4 id="li-process-label" style="display: none">Authenticating..</h4><div class="clear"> </div>
 					<h3>Login:</h3>
 					<div>
 						<li><input type="email" id="li-inp-email" placeholder="Email" required/></li>
@@ -92,7 +101,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		<!-----//end-copyright---->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>-->
 		<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
