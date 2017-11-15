@@ -1,7 +1,6 @@
-
 <!--
-Author: W3layouts
-Author URL: http://w3layouts.com
+Author: Chinmaya Pati
+Author URL: https://shonak-chinmayapati.c9users.io
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
@@ -23,6 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<p>Lorem iopsum dolor sit amit,consetetur sadipscing eliter,sed diam voluptua.At vero  eso et accusam et justo duo dolores et ea rebum. </p>
 			<form>
+				<!-- Signup Form -->
 				<ul class="left-form">
 					<h2>New Account:</h2>
 					<li>
@@ -31,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="clear"> </div>
 					</li> 
 					<li>
-						<input type="text"   placeholder="Email" required/>
+						<input type="email"   placeholder="Email" required/>
 						<a href="#" class="icon ticker"> </a>
 						<div class="clear"> </div>
 					</li> 
@@ -41,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="clear"> </div>
 					</li> 
 					<li>
-						<input type="password"   placeholder="password" required/>
+						<input type="password"   placeholder="Confirm password" required/>
 						<a href="#" class="icon into"> </a>
 						<div class="clear"> </div>
 					</li> 
@@ -49,6 +49,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" onclick="myFunction()" value="Create Account">
 						<div class="clear"> </div>
 				</ul>
+
+				<!-- Login Form -->
 				<ul class="right-form">
 					<h3>Login:</h3>
 					<div>
