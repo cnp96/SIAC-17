@@ -1,9 +1,10 @@
 /*--
-Author: W3layouts
-Author URL: http://w3layouts.com
+Author: Chinmaya Pati
+Author URL: https://shonak-chinmayapati.c9users.io
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
 /* reset */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
@@ -95,7 +96,7 @@ form{
  	 -o-border-radius:0.3em;
  	 margin-bottom: 10px;
 }
-.right-form input[type=text], input[type=password] {
+.right-form input[type=text], input[type=password], input[type=email] {
 	font-family: 'Open Sans', sans-serif;
 	width:90%;
 	padding: 0.7em 1em 0.7em 1em;
@@ -143,7 +144,7 @@ form{
 	font-weight: 600;
 	color:#363535;
 }
-.left-form input[type=submit]{
+.left-form input[type=submit], input[type=button]{
   padding:10px 19px;
   border-radius:0.3em;
  -webkit-border-radius:0.3em;
