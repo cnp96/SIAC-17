@@ -99,9 +99,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 		</div>
 		<!-----start-copyright---->
-   			<div class="copy-right">
-				<p>Template by <a href="http://w3layouts.com">w3layouts</a></p> 
-			</div>
+   <!--			<div class="copy-right">-->
+			<!--	<p>Template by <a href="http://w3layouts.com">w3layouts</a></p> -->
+			<!--</div>-->
 		<!-----//end-copyright---->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
