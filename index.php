@@ -35,9 +35,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<div class="main">
 		<div class="header" >
-			<h1>Login or Create a Free Account!</h1>
+			<h1>SIAC-17</h1>
 		</div>
-		<p>Lorem iopsum dolor sit amit,consetetur sadipscing eliter,sed diam voluptua.At vero  eso et accusam et justo duo dolores et ea rebum. </p>
+		<p>Self Improvement and Ameliorate Concentration Activity Monitor Portal</p>
 			<form>
 				<!-- Signup Form -->
 				<ul class="left-form">

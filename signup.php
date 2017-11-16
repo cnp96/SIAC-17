@@ -13,7 +13,7 @@ if( isset($_POST['name']) && !empty($_POST['name']) ) {
             
             $obj = new Database();
             $res = $obj->signup($name, $email, $password);
-            echo $res===true ? 1 : $res;
+            echo $res===true ? "1" : $res;
             unset($obj);
         }
         else echo "Enter a valid password.";

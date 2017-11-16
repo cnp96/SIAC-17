@@ -44,7 +44,8 @@ function validateSignup(){
                 }
             },
             success: function(res) {
-                if(res=="1") {
+                console.log([res, typeof res]);
+                if(res==1) {
                     $('#process-label').css("color", "#558B2F").html("Signup Success. Please login to continue");
                 }
                 else {
