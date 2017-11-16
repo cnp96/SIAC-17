@@ -27,6 +27,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			#process-label {
 				color: #3F51B5; width: 100%; text-align: center; padding-bottom: 10px; display:none;
 			}
+			.login-btn { background-color: darkcyan !important; color: white !important; }
+			.signup-btn { background-color: coral !important; color: white !important; }
+			.forgot { color: maroon; }
 		</style>
 </head>
 <body>
@@ -72,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li id="su-err-cnfpwd" style="border:none; margin:0px; display:none">
 						<p style="color: tomato;">Passwords do not match.</p>
 					</li>
-					<input type="button" onclick="validateSignup()" value="Create Account">
+					<input type="button" onclick="validateSignup()" class="signup-btn" value="Create Account">
 						<div class="clear"> </div>
 				</ul>
 			</form>
@@ -85,8 +88,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div>
 						<li><input type="email" id="li-inp-email" placeholder="Email" value="test@mail.com" required/></li>
 						<li> <input type="password" id="li-inp-pwd" placeholder="Password" value="Test@1" required/></li>
-						<h4><a href="#">I forgot my Password!</a></h4><div class="clear"> </div>
-						<input type="button" onclick="validateLogin()" value="Login" >
+						<h4><a href="javascript:alert('This functionality is coming soon!');" class="forgot">I forgot my Password!</a></h4><div class="clear"> </div>
+						<input type="button" onclick="validateLogin()" class="login-btn" value="Login" >
 					</div>
 					<div class="clear"> </div>
 				</ul>
