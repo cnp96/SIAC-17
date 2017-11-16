@@ -18,7 +18,7 @@ Successfully Tested in a Linux Environment running **Ubuntu**.
 
 ## Authors
 * **Md. Adil**
-* **Shonak Markhan**
+* **Shonak Markan**
 
 ## License
 *N/A*
