@@ -11,7 +11,7 @@ create table if not exists creds(
     );
 */
 
-error_reporting(0);
+error_reporting(1);
 session_start();
 
 define("DB_LINK", "codesnip.xyz");
@@ -29,6 +29,7 @@ class Database {
             echo mysqli_connect_error();
         }
     }
+    
     public function __destruct() {
         if($this->link) mysqli_close($this->link);
     }
@@ -69,6 +70,25 @@ class Database {
             else return "Invalid credentials.";
         } else return "Couldn't connect to database. Try after sometime.";
     }
+    
+    public function update() {
+        if($this->link) {
+            $ts = $_SESSION['ts'];
+            $sql = "SELECT id,daydream,time FROM records WHERE id>$ts ORDER BY id DESC;";
+            $res = mysqli_query($this->link, $sql);
+            if($res) {
+                $arr = array();
+                while( $row = mysqli_fetch_assoc($res) ) {
+                    $arr[] = $row;
+                }
+                if( !empty($arr) ) {
+                    $_SESSION["ts"] = $arr[0]['id'];
+                }
+                return $arr;
+            }
+            else return false;
+        }
+    }
 }
 
-?>
+?> 

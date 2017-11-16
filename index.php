@@ -101,7 +101,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		<!-----//end-copyright---->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>-->
 		<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
