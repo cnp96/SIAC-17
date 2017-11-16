@@ -117,14 +117,7 @@ function update() {
                 $("#records tr:first").after(st);
            }
            else if(res==0) {
-                if( $("#recordcount").val() == "-1" ) {
-                    console.log("No Records");
-                    st = "<tr><td colspan='3'>No Records Yet.</td></tr>";
-                    $("#records tr:first").after(st);
-                    $("#recordcount").val("-2");
-                }
-                else console.log("No Updates");
-                if( $("#recordcount").val()=="-2" ) $("#recordcount").val("-1");
+                console.log("No Updates");
            }
            else if(res==-1){
                console.log("Server issues! Please Try after sometime.");
@@ -138,8 +131,10 @@ function update() {
                    st+="<td>"+res[i].daydream+"</td>";
                    st+="<td>"+res[i].time+"</td></tr>";
                 }
-                $("#recordcount").val("1");
-                $("#records tr:eq(1)").remove();
+                if( $("#recordcount").val()=="-2" ) {
+                    $("#records tr:eq(1)").remove();
+                    $("#recordcount").val("1");
+                }
                 $("#records tr:first").after(st);
            }
            
