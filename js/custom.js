@@ -113,7 +113,7 @@ function update() {
                 res = 0;
                 $("#recordcount").val("-2");
                 $("#records tr:gt(0)").remove();
-                st = "<tr><td colspan='3'>No Records Yet.</td></tr>";
+                st = "<tr><td colspan='2'>No Records Yet.</td></tr>";
                 $("#records tr:first").after(st);
            }
            else if(res==0) {
@@ -127,7 +127,7 @@ function update() {
                 var st = "";
                 for(var i in res){
                 //   console.log(res[i]);
-                   st+="<tr><td>"+res[i].id+"</td>";
+                //   st+="<tr><td>"+res[i].id+"</td>";
                    st+="<td>"+res[i].daydream+"</td>";
                    st+="<td>"+res[i].time+"</td></tr>";
                 }

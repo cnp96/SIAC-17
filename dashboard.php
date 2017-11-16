@@ -81,7 +81,7 @@
         <input type="hidden" id="recordcount" value="-1">
         <table class="responstable" id="records">
           <tr>
-            <th>ID</th>
+            <!--<th>ID</th>-->
             <th>Day Dream</th>
             <th>Time</th>
           </tr>
