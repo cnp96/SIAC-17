@@ -7,6 +7,7 @@
         $obj = new Database();
         $response = $obj->update();
         if( $response===false ) echo "-1";
+        else if($response == -1) echo "-2";
         else if( empty($response) ) echo "0";
         else echo json_encode($response);
     }

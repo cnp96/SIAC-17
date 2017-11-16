@@ -1,8 +1,5 @@
 function validateSignup(){
-    /*
-        icon into - wrong
-        icon ticker - correct
-    */
+    
     var uname = $("#su-inp-username").val(), email = $("#su-inp-email").val(), pwd = $("#su-inp-pwd").val(), cnfpwd = $("#su-inp-cnfpwd").val();
     
     var validemail=false, validpwd=false, validcnfpwd=false;
@@ -108,11 +105,61 @@ function update() {
        url: "update.php",
        success: function(res) {
            res = jQuery.parseJSON(res);
-           console.log(res);
+           
+            // Failsafe for no records
+           console.log([res, typeof res]);
+           if(res==-2) {
+                console.log("No Records in DB.");
+                res = 0;
+                $("#recordcount").val("-2");
+                $("#records tr:gt(0)").remove();
+                st = "<tr><td colspan='3'>No Records Yet.</td></tr>";
+                $("#records tr:first").after(st);
+           }
+           else if(res==0) {
+                if( $("#recordcount").val() == "-1" ) {
+                    console.log("No Records");
+                    st = "<tr><td colspan='3'>No Records Yet.</td></tr>";
+                    $("#records tr:first").after(st);
+                    $("#recordcount").val("-2");
+                }
+                else console.log("No Updates");
+                if( $("#recordcount").val()=="-2" ) $("#recordcount").val("-1");
+           }
+           else if(res==-1){
+               console.log("Server issues! Please Try after sometime.");
+               alert("Server Issues! Try after sometime");
+           }
+           else {
+                var st = "";
+                for(var i in res){
+                //   console.log(res[i]);
+                   st+="<tr><td>"+res[i].id+"</td>";
+                   st+="<td>"+res[i].daydream+"</td>";
+                   st+="<td>"+res[i].time+"</td></tr>";
+                }
+                $("#recordcount").val("1");
+                $("#records tr:eq(1)").remove();
+                $("#records tr:first").after(st);
+           }
+           
+           $("#updatecount").html(res.length || res);
            $("#loading").css("display","none");
+           updateTime();
        },
        error: function(err) {
            $("#loading").css("display","none");
        }
     });
+}
+
+function updateTime() {
+    var d = new Date();
+    var time = "Last updated on " + d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear() + " at ";
+    time += d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    $("#timestamp").html(time);
+}
+
+function logout() {
+    window.location.href = "logout.php";
 }

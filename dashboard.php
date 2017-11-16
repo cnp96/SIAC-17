@@ -2,6 +2,10 @@
     error_reporting(0);
     session_start();
     if( !isset($_SESSION["id"]) || empty($_SESSION["id"]) ) header("Location: index.php");
+    else { 
+        $_SESSION["callupdate"] = true; 
+        unset($_SESSION["ts"]);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,37 +52,49 @@
                 width: 30px;
                 height: 30px;
             }
+            .logout-btn {
+                float: right;
+                background-color: crimson;
+            }
+            .updates {
+                padding-left: 10px;
+                color: magenta;
+            }
+            #updatecount { color: tomato; }
         </style>
     </head>
     <body>
+        <input type="button" value="Logout" onclick="logout()" class="button logout-btn">
         <ul>
             <li>Welcome <?php echo $_SESSION["name"]; ?> !</li>
             <li><a href="mailto:<?php echo $_SESSION['email']; ?>"><?php echo $_SESSION['email']; ?></a></li>
         </ul>
-        
         <table cellspacing="3">
             <tr>
                 <td><h3>Recorded Data</h3></td>
                 <td><input type="button" class="button" onclick="update()" value="Update"></td>
                 <td id="loading" style="display: none; padding: 15px"><img src="images/loading.gif" alt="loading..."></img></td>
-                <td><h5>Last updated at 06:19:05 PM</h5></td>
+                <td><h5 id="timestamp">Last updated at --:--:--</h5></td>
+                <td><h5 class="updates"><span id="updatecount">--</span> new updates !</h5></td>
             </tr>
         </table>
-        
-        <table class="responstable">
+        <input type="hidden" id="recordcount" value="-1">
+        <table class="responstable" id="records">
           <tr>
             <th>ID</th>
             <th>Day Dream</th>
             <th>Time</th>
           </tr>
-          
-          <tr>
-            <td>1</td>
-            <td>Steve</td>
-            <td>01:22:11 PM</td>
-          </tr>
         </table>
+        
         <script type="text/javascript" src="js/custom.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <?php
+            if( !isset($_SESSION["ts"]) || (isset($_SESSION["callupdate"]) && $_SESSION["callupdate"]==true) ) {
+                if( $_SESSION["callupdate"] ) $_SESSION["callupdate"]=false;
+                echo '<script type="text/javascript">$(document).ready(function(){ update(); });</script>';
+            }
+        ?>
+
     </body>
 </html>

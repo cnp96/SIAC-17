@@ -83,8 +83,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4 id="li-process-label" style="display: none">Authenticating..</h4><div class="clear"> </div>
 					<h3>Login:</h3>
 					<div>
-						<li><input type="email" id="li-inp-email" placeholder="Email" required/></li>
-						<li> <input type="password" id="li-inp-pwd" placeholder="Password" required/></li>
+						<li><input type="email" id="li-inp-email" placeholder="Email" value="test@mail.com" required/></li>
+						<li> <input type="password" id="li-inp-pwd" placeholder="Password" value="Test@1" required/></li>
 						<h4><a href="#">I forgot my Password!</a></h4><div class="clear"> </div>
 						<input type="button" onclick="validateLogin()" value="Login" >
 					</div>

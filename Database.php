@@ -71,19 +71,37 @@ class Database {
         } else return "Couldn't connect to database. Try after sometime.";
     }
     
+    public function num_records(){
+        if($this->link) {
+            $sql = "SELECT COUNT(id) AS totalID FROM records;";
+            $res = mysqli_query($this->link, $sql);
+            return mysqli_fetch_assoc($res)['totalID'];
+        } else return 1;
+    }
     public function update() {
         if($this->link) {
-            $ts = $_SESSION['ts'];
-            $sql = "SELECT id,daydream,time FROM records WHERE id>$ts ORDER BY id DESC;";
+            if( $this->num_records() == 0 ) return -1;
+            
+            $ts=""; $sql="";
+            if(isset($_SESSION["ts"])) {
+                $ts = $_SESSION['ts'];
+                $sql = "SELECT id,daydream,time FROM records WHERE id>$ts ORDER BY id DESC;";
+            }
+            else {
+                $sql = "SELECT id,daydream,time FROM records ORDER BY id DESC LIMIT 20;";
+            }
+            
             $res = mysqli_query($this->link, $sql);
             if($res) {
                 $arr = array();
                 while( $row = mysqli_fetch_assoc($res) ) {
                     $arr[] = $row;
                 }
+                
                 if( !empty($arr) ) {
                     $_SESSION["ts"] = $arr[0]['id'];
                 }
+                
                 return $arr;
             }
             else return false;
