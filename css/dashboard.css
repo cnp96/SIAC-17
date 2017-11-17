@@ -68,6 +68,7 @@ img {
     height: 30px;
 }
 .logout-btn {
+    display: inline-block;
     float: right;
     background-color: crimson !important;
 }
@@ -194,4 +195,31 @@ li>a {
     text-align: center;
     text-decoration: none;
     font-size: 14px;
+}
+#mobileNo, #otp-inp {
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 5%;
+  margin-left: 20px;
+  width: 25%;
+  border: none;
+  border-bottom: 1px solid !important;
+}
+#mobileNo:focus, #otp-inp:focus {
+  outline: none;
+}
+#otp-inp {
+  padding-left: 5px;
+  width: 10%;
+}
+#send {
+  margin-left: 20px;
+  font-size: 12px;
+}
+.otplabel {
+  font-size: 10px;
+  color: darkcyan;
+}
+p {
+  font-size: 12px !important;
 }
