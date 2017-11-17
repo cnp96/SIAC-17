@@ -5,13 +5,13 @@ Self Improvement and Ameliorate Concentration
 
 ## Prerequisites
 * **Software:**
-    * PHP: 5.6
-    * MySQL: 5.7
+   * PHP: 5.6
+   * MySQL: 5.7
 * **Hardware:**
-    * Raspberry PI 3 Model B
+   * Raspberry PI 3 Model B
 
 ## Installation Notes
-    * Import siac17.sql into your local database and update credentials in Database.php
+   * Import _**siac17.sql**_ into your local database and update credentials in _**Database.php**_ before testing application.
     
 ## Running Tests / Example
 Successfully Tested in a Linux Environment running **Ubuntu**.
