@@ -9,7 +9,7 @@ if(isset($_GET['mobile']) && !empty($_GET['mobile'])) {
     
         // Parameters
         $sender = "SIAC17";
-        $authKey = "116268AeWn3LKMqbOe5760a5a6";
+        $authKey = "";
         $msg = urlencode("Hi, please enter $otp as the otp for your mobile verification at SIAC17.");
         $time = time();
         
