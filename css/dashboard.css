@@ -1,3 +1,80 @@
+.styled-select {
+  /*background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+  height: 29px;
+  overflow: hidden;
+  width: 40%;
+}
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  width: 125%;
+}
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.blue {
+  background-color: #236161;
+}
+.blue select {
+    color: #fff;
+}
+select#interval {
+    background-color: #236161;
+}
+#updatecount { color: tomato; }
+
+
+ul {
+    padding-left: 0px;
+}
+li {
+    list-style: none;
+    padding-bottom: 0.5em;
+}
+li:first-child {
+    font-family: arial;
+    font-weight: bold;
+    font-size: larger;
+    color: #E65100;
+}
+li>a {
+    color: #795548; 
+    text-decoration: none;
+    font-family: georgia;
+    font-weight: bold;
+    font-size: small;
+}
+.block {
+    display: inline-block;
+    margin-right: 0.7em;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 6px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+img {
+    width: 30px;
+    height: 30px;
+}
+.logout-btn {
+    float: right;
+    background-color: crimson !important;
+}
+.updates {
+    color: magenta;
+}
+
 .responstable {
   margin: 1em 0;
   width: 100%;
@@ -116,10 +193,5 @@ li>a {
     padding: 6px 24px;
     text-align: center;
     text-decoration: none;
-    /*display: inline-block;*/
     font-size: 14px;
-}
-img {
-    width: 30px;
-    height: 30px;
 }

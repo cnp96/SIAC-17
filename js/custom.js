@@ -1,3 +1,6 @@
+// Global Variables
+method="manual";
+
 function validateSignup(){
     
     var uname = $("#su-inp-username").val(), email = $("#su-inp-email").val(), pwd = $("#su-inp-pwd").val(), cnfpwd = $("#su-inp-cnfpwd").val();
@@ -104,11 +107,12 @@ function update() {
     $.ajax({
        type: "get",
        url: "update.php",
+       async: "false",
        success: function(res) {
            res = jQuery.parseJSON(res);
            
             // Failsafe for no records
-           console.log([res, typeof res]);
+        console.log([res, typeof res]);
            if(res==-2) {
                 console.log("No Records in DB.");
                 res = 0;
@@ -127,9 +131,7 @@ function update() {
            else {
                 var st = "";
                 for(var i in res){
-                //   console.log(res[i]);
-                //   st+="<tr><td>"+res[i].id+"</td>";
-                   st+="<td>"+res[i].daydream+"</td>";
+                   st+="<tr><td>"+res[i].daydream+"</td>";
                    st+="<td>"+res[i].time+"</td></tr>";
                 }
                 if( $("#recordcount").val()=="-2" ) {
@@ -145,17 +147,50 @@ function update() {
        },
        error: function(err) {
            $("#loading").css("display","none");
-       }
+      }
+    //   ,
+    //   onDone: function() {
+    //         if(method=="auto") setUpdateInterval();    
+    //   }
     });
+}
+
+function setUpdateInterval() {
+    var val = $("#interval").val();
+    switch(val) {
+        case "1":
+            if(typeof updateObj == "number") { clearInterval(updateObj); }
+            updateObj = setInterval(update, 1000);
+            break;
+        case "3":
+            if(typeof updateObj == "number") { clearInterval(updateObj); }
+            updateObj = setInterval(update, 3000);
+            break;
+        case "5":
+            if(typeof updateObj == "number") { clearInterval(updateObj); }
+            updateObj = setInterval(update, 5000);
+            break;
+        case "10":
+            if(typeof updateObj == "number") { clearInterval(updateObj); }
+            updateObj = setInterval(update, 10000);
+            break;
+        default:
+            method="manual";
+            clearInterval(updateObj);
+    }
 }
 
 function updateTime() {
     var d = new Date();
-    var time = "Last updated on " + d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear() + " at ";
-    time += d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    var time = "Last updated on " + zfill(d.getDate()) + "/" + zfill(d.getMonth()+1) + "/" + d.getFullYear() + " at ";
+    time += zfill(d.getHours()) + ":" + zfill(d.getMinutes()) + ":" + zfill(d.getSeconds());
     $("#timestamp").html(time);
 }
 
 function logout() {
     window.location.href = "logout.php";
+}
+
+function zfill(num) {
+    return num<10 ? "0"+num : num ;
 }
