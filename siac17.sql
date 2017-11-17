@@ -57,15 +57,6 @@ CREATE TABLE `records` (
   `time` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `records`
---
-
-INSERT INTO `records` (`id`, `daydream`, `time`) VALUES
-(21, 12, 13),
-(22, 113, 21),
-(23, 115, 23),
-(24, 112, 21);
 
 --
 -- Indexes for dumped tables
@@ -92,12 +83,12 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT for table `creds`
 --
 ALTER TABLE `creds`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

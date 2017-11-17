@@ -17,7 +17,7 @@ session_start();
 define("DB_LINK", "codesnip.xyz");
 define("DB_USER", "chiku");
 define("DB_PASSWORD", "Password@1");
-define("DB_DATABASE", "shonak");
+define("DB_DATABASE", "siac17");
     
 class Database {
     

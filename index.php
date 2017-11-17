@@ -94,15 +94,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clear"> </div>
 				</ul>
 				<div class="clear"> </div>
-					
 			</form>
-			
 		</div>
-		<!-----start-copyright---->
-   <!--			<div class="copy-right">-->
-			<!--	<p>Template by <a href="http://w3layouts.com">w3layouts</a></p> -->
-			<!--</div>-->
-		<!-----//end-copyright---->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
 </body>
