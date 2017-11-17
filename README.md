@@ -10,9 +10,9 @@ Self Improvement and Ameliorate Concentration
 * **Hardware:**
     * Raspberry PI 3 Model B
 
-## Installing
-No Installation Notes Yet
-
+## Installation Notes
+    * Import siac17.sql into your local database and update credentials in Database.php
+    
 ## Running Tests / Example
 Successfully Tested in a Linux Environment running **Ubuntu**.
 
