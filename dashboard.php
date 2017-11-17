@@ -50,7 +50,7 @@
         </table>
         
         <script type="text/javascript" src="js/custom.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
         <?php
             if( !isset($_SESSION["ts"]) || (isset($_SESSION["callupdate"]) && $_SESSION["callupdate"]==true) ) {
                 if( $_SESSION["callupdate"] ) $_SESSION["callupdate"]=false;
