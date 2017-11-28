@@ -1,22 +1,11 @@
 <?php
-/*
-create table if not exists creds( 
-    id int(10) not null auto_increment, 
-    name varchar(50) not null, 
-    email varchar(40) not null, 
-    password varchar(20) not null, 
-    created_on timestamp default current_timestamp, 
-    primary key pk_id(id), 
-    unique key uk_email(email) 
-    );
-*/
 
 error_reporting(1);
 session_start();
 
-define("DB_LINK", "codesnip.xyz");
-define("DB_USER", "chiku");
-define("DB_PASSWORD", "Password@1");
+define("DB_LINK", "localhost");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
 define("DB_DATABASE", "siac17");
     
 class Database {
