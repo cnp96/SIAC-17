@@ -22,6 +22,7 @@ Self Improvement and Ameliorate Concentration
 ## Authors
 * **Md. Adil**
 * **Shonak Markan**
+* **Chinmaya Pati**
 
 ## License
 *N/A*
