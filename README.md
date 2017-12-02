@@ -17,6 +17,7 @@ Self Improvement and Ameliorate Concentration
     
 ## Running Tests / Example
 Successfully Tested in a Linux Environment running **Ubuntu**.
+
 Must run the server as well as PHP with **super user permissions** since usage of kill command in logout script.
 
 ## Authors
