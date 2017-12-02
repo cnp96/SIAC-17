@@ -12,6 +12,8 @@ Self Improvement and Ameliorate Concentration
 
 ## Installation Notes
    * Import _**siac17.sql**_ into your local database and update credentials in _**Database.php**_ before testing application.
+   * Add Database Credentials in _**Database.php**_
+   * Set Python Executable and Script path in _**runScript.php**_
     
 ## Running Tests / Example
 Successfully Tested in a Linux Environment running **Ubuntu**.
