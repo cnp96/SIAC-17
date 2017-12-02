@@ -16,44 +16,6 @@
     </head>
     <body>
     
-        <!-- Button trigger modal -->
-        <button type="button" id="launchModal" style="display: " class="btn btn-primary" data-toggle="modal" data-target="#addPhone">
-          Launch demo modal
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="addPhone" tabindex="-1" role="dialog" aria-labelledby="addPhoneLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="addPhoneLabel">Add Mobile</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div>
-                  <p>Add extra security to your account.</p>
-                  <div>
-                    <p style="display: inline-block"><b>Mobile : </b></p>
-                    <input type="text" id="mobileNo" placeholder="1234567890" >
-                    <button id="send" type="button" class="btn btn-warning">Send</button>
-                    <div class="clear"></div>
-                  </div>
-                  <div id="otpresponse" style="display: none">
-                    <p class="otplabel" id="otplabel">An OTP has been sent to you mobile.</p>
-                    <p id="otp" style="display: inline-block"><b>OTP : </b></p><input type="text" id="otp-inp" placeholder="1234" >
-                  </div>
-                </div>             
-              </div>
-              <div class="modal-footer">
-                <button type="button" style="display: none" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Verify Mobile</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
         <ul>
             <li style="margin-top: 15px;">
                 <h4 style="display: inline-block;">Welcome <?php echo $_SESSION["name"]; ?> !</h4>

@@ -3,9 +3,9 @@
 error_reporting(1);
 session_start();
 
-define("DB_LINK", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
+define("DB_LINK", "codesnip.xyz");
+define("DB_USER", "chiku");
+define("DB_PASSWORD", "Password@1");
 define("DB_DATABASE", "siac17");
     
 class Database {
@@ -67,17 +67,19 @@ class Database {
             return mysqli_fetch_assoc($res)['totalID'];
         } else return 1;
     }
+    
     public function update() {
         if($this->link) {
             if( $this->num_records() == 0 ) return -1;
             
             $ts=""; $sql="";
+            $userid = $_SESSION["id"];
             if(isset($_SESSION["ts"])) {
                 $ts = $_SESSION['ts'];
-                $sql = "SELECT id,daydream,time FROM records WHERE id>$ts ORDER BY id DESC;";
+                $sql = "SELECT id,daydream,time FROM records WHERE user_id=$userid AND id>$ts ORDER BY id DESC;";
             }
             else {
-                $sql = "SELECT id,daydream,time FROM records ORDER BY id DESC LIMIT 20;";
+                $sql = "SELECT id,daydream,time FROM records WHERE user_id=$userid ORDER BY id DESC LIMIT 20;";
             }
             
             $res = mysqli_query($this->link, $sql);
