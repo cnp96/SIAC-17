@@ -11,7 +11,7 @@ define("DB_DATABASE", "siac17");
 class Database {
     
     private $link;
-    
+
     public function __construct() {
         $this->link = mysqli_connect(DB_LINK, DB_USER, DB_PASSWORD, DB_DATABASE);
         if(!$this->link) {
@@ -54,6 +54,8 @@ class Database {
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['created_on'] = $row['created_on'];
+                $idd = $row['id'];
+                include "runScript.php";
                 return true;
             }
             else return "Invalid credentials.";
