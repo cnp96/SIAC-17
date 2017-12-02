@@ -3,9 +3,9 @@
 error_reporting(1);
 session_start();
 
-define("DB_LINK", "codesnip.xyz");
-define("DB_USER", "chiku");
-define("DB_PASSWORD", "Password@1");
+define("DB_LINK", "");
+define("DB_USER", "");
+define("DB_PASSWORD", "");
 define("DB_DATABASE", "siac17");
     
 class Database {
