@@ -30,7 +30,7 @@
                 <td id="loading" style="display: none;"><img src="images/loading.gif" alt="loading..."></img></td>
                 <td><h6 id="timestamp">Last updated on dd/MM/yyyy at --:--:--</h6></td>
                 <td><h6 class="updates"><span id="updatecount">--</span> new updates !</h6></td>
-                <td>
+                <td style="display: none">
                     <h6 style="display: inline-block">Set Refresh Interval : </h6>
                     <div class="styled-select blue semi-square" style="display: inline-block; vertical-align: middle;">
                       <select id="interval" onchange="setUpdateInterval()">
