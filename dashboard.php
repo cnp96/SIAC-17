@@ -26,7 +26,7 @@
         <table style="width: 100%" border="0" cellspacing="3">
             <tr>
                 <td style="width: 15%"><h3>Recorded Data</h3></td>
-                <td><input type="button" class="button" onclick="update()" value="Update"></td>
+                <td><input type="button" class="button" onclick="update()" value="Update" style="display: none"></td>
                 <td id="loading" style="display: none;"><img src="images/loading.gif" alt="loading..."></img></td>
                 <td><h6 id="timestamp">Last updated on dd/MM/yyyy at --:--:--</h6></td>
                 <td><h6 class="updates"><span id="updatecount">--</span> new updates !</h6></td>
